@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAIWAN</title>
     <style>
+        /* 全局樣式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -17,7 +18,7 @@
         header {
             background-image: url("https://travelnextstation.com/wp-content/uploads/Taipei-night.jpg");
             background-size: cover;
-            background-position: center -100px;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 60px 0;
@@ -50,6 +51,8 @@
 
         h2 {
             color: #ff4500;
+            text-align: left; /* 左對齊 */
+        
         }
 
         .grid {
@@ -87,33 +90,31 @@
             margin: 10px 0;
         }
 
+        .travel-card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
         .travel-card {
-            width: 250px;
+            width: 300px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
             text-align: center;
             transition: transform 0.3s ease;
-            /* 滑鼠懸停時放大效果 */
         }
 
         .travel-card:hover {
-            transform: scale(1.05);
-            /* 放大卡片 */
+            transform: translateY(-5px);
         }
 
         .travel-card img {
             width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-            /* 圖片滑鼠懸停時效果 */
-        }
-
-        .travel-card:hover img {
-            transform: scale(1.1);
-            /* 圖片放大 */
+            height: 200px;
+            object-fit: cover;
         }
 
         .travel-card-content {
@@ -192,29 +193,33 @@
         </div>
     </section>
 
+
     <section id="北部">
         <h2>北部</h2>
-        <div class="travel-card">
-            <a href="taipei.html">
-                <img src="https://www.mytaiwan.org/skin/mytaiwan/images/pictures/taipei-101-1.jpg" alt="台北">
-                <div class="travel-card-content">
-                    <h3>台北</h3>
-                    <p>亞洲，台灣</p>
-                </div>
-            </a>
-        </div>
+        <div class="travel-card-container">
+            <div class="travel-card">
+                <a href="taipei.html">
+                    <img src="https://www.mytaiwan.org/skin/mytaiwan/images/pictures/taipei-101-1.jpg" alt="台北">
+                    <div class="travel-card-content">
+                        <h3>台北</h3>
+                        <p>亞洲，台灣</p>
+                    </div>
+                </a>
+            </div>
 
-        <div class="travel-card">
-            <a href="Yilan.html">
-                <img src="https://www.newsmarket.com.tw/files/2019/04/%E8%98%AD%E9%99%BD%E5%8D%9A%E7%89%A9%E9%A4%A8uFF0F%E6%94%9D%E5%BD%B1%E8%80%85%E9%BB%83%E9%95%B7%E5%AF%8C.jpg"
-                    alt="宜蘭">
-                <div class="travel-card-content">
-                    <h3>宜蘭</h3>
-                    <p>亞洲，台灣</p>
-                </div>
-            </a>
+            <div class="travel-card">
+                <a href="Yilan.html">
+                    <img src="https://www.newsmarket.com.tw/files/2019/04/%E8%98%AD%E9%99%BD%E5%8D%9A%E7%89%A9%E9%A4%A8uFF0F%E6%94%9D%E5%BD%B1%E8%80%85%E9%BB%83%E9%95%B7%E5%AF%8C.jpg"
+                        alt="宜蘭">
+                    <div class="travel-card-content">
+                        <h3>宜蘭</h3>
+                        <p>亞洲，台灣</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
+
 
     <footer>
         <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
