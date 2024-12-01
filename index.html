@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAIWAN</title>
+    <script>
+        // 保存滾動位置
+        function saveScrollPosition() {
+            localStorage.setItem('scrollPosition', window.scrollY); // 保存垂直滾動位置
+        }
+    
+        // 恢復滾動位置
+        function restoreScrollPosition() {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                window.scrollTo(0, parseInt(scrollPosition, 10)); // 恢復滾動到指定位置
+                localStorage.removeItem('scrollPosition'); // 清除保存的位置
+            }
+        }
+    
+        // 恢復滾動位置時在頁面加載完成後執行
+        window.onload = restoreScrollPosition;
+        // 在頁面離開前保存滾動位置
+        window.onbeforeunload = saveScrollPosition;
+    </script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -153,6 +174,29 @@
             padding: 20px;
 
         }
+
+        #topButton {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd; 
+    border-radius: 50px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000; 
+}
+
+#topButton:hover {
+    background-color: #e2e6ea; 
+    transform: scale(1.1); 
+}
+
+
     </style>
 </head>
 
@@ -162,7 +206,7 @@
     </header>
 
     <nav>
-        <a href="#attractions">台灣的熱門景點</a>
+        <a href="#attractions">景點</a>
         <a href="#北部">北部</a>
         <a href="#中部">中部</a>
         <a href="#南部">南部</a>
@@ -172,17 +216,17 @@
 
     <section id="about">
         <h2>台灣 : 翡翠之島的魅力旅程</h2>
-        <p>
+        <p style="margin-left: 50px; margin-right: 20px;">
             台灣是一座宛如翡翠般的寶島，四季如春，擁有壯麗的自然景觀與深厚的人文底蘊。
             巍峨的中央山脈如脊梁般貫穿全島，孕育出奇岩峽谷與茂密森林，太平洋的波濤拍打著東岸，形成壯闊的海岸線與細緻的金色沙灘。 </p>
-        <p>夜市煙火裡的人間百味，展現出台灣人熱情好客的天性，讓人彷彿步入美食天堂。
+        <p style="margin-left: 50px; margin-right: 20px;">夜市煙火裡的人間百味，展現出台灣人熱情好客的天性，讓人彷彿步入美食天堂。
             台灣的多元文化如同彩虹般斑斕，原住民傳統、閩南文化與現代潮流在此交織出豐富的生命力。 </p>
-        <p>每年的媽祖遶境、燈會煙火，都是令人驚嘆的民俗盛事，展現人民虔誠的信仰與團結的力量。
+        <p style="margin-left: 50px; margin-right: 20px;">每年的媽祖遶境、燈會煙火，都是令人驚嘆的民俗盛事，展現人民虔誠的信仰與團結的力量。
             這片土地既溫柔又剛毅，如詩如畫，令人心醉神迷。</p>
     </section>
 
     <section id="attractions">
-        <h2>熱門景點</h2>
+        <h2>景點</h2>
         <div class="grid">
             <div class="card">
                 <a href="#北部">
@@ -297,25 +341,28 @@
                     </div>
                 </a>
             </div>
-
-            <div class="travel-card">
-                <a href="Kaohsiung.html">
-                    <img src="https://www.welcometw.com/wp-content/uploads/2021/03/3_3-2_thumb.jpg" alt="高雄">
-                    <div class="travel-card-content">
-                        <h3>高雄</h3>
-                        <p>亞洲，台灣</p>
-                    </div>
-                </a>
-            </div>
         </div>
-    </section>
+        <footer>
+            <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
+        </footer>
+        
 
-
-
-
-    <footer>
-        <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
-    </footer>
+        <button id="topButton" onclick="scrollToTop()" style="display: none;">⬆ Top</button>
+ 
+        <script>
+            window.onscroll = function () {
+                const topButton = document.getElementById("topButton");
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    topButton.style.display = "block";
+                } else {
+                    topButton.style.display = "none";
+                }
+            };
+        
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        </script>
 </body>
 
 </html>
