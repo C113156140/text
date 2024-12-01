@@ -1,122 +1,25 @@
-<!doctype html>
-<html lang="zh">
+        .breadcrumb-container {
+    background-color: #f4f4f4; 
+    padding: 25px 15px;      
+    width: 100%;            
+    box-sizing: border-box;   
+    margin: 0;                
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-<head>
-    <meta charset="UTF-8">
-    <title>台東景點</title>  <!--  改底線打縣市名   -->
-    <style>
-        body {
-            text-align: center;
-        }
+.breadcrumb {
+    font-size: 20px; 
+    color: #555; 
+    margin-left: 80px; 
+    text-align: left; 
+}
 
-        h1 {
-            font-size: 36px;
-        }
+.breadcrumb a {
+    color: #555;       
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .hotel-section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .hotel-section h2 {
-            font-size: 24px;
-            color: #ffa600;
-            margin-bottom: 10px;
-        }
-
-        .hotel-section h1 {
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .hotel-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .hotel-section p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .underline-effect {
-            text-decoration: none;
-            color: #FF4500;
-        }
-
-        .underline-effect:hover {
-            text-decoration: underline;
-            color: #c93600;
-        }
-
-        .card a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .card a:hover {
-            text-decoration: underline;
-        }
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-
-        footer {
-            background-color: #464544;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div id="navigation">
-        <p><a href="index.html" class="underline-effect"> 回首頁-台灣旅遊指南 </a></p>
-
-        <section class="hotel-section">
-
-            <h2>台東旅遊景點</h2>     <!--  改底線打縣市名   -->
-            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1603766591/blog/kttsmyqekq2m4neeqakm.webp">   <!--  雙引號中間放入圖片網址   -->
-            <p><strong>三仙台</strong></p>  <!--  中間打入景點名稱   -->
-            <p>說三仙台是東海岸最熱門的風景區也不為過，島上有三塊巨大岩石，傳說呂洞賓、李鐵拐、何仙姑曾登臨此島，因而得名；生態景觀豐富，有許多奇特的石頭及植物，被列為自然保護區；最知名的地標跨海拱橋，更是非來三仙台不可的原因</p>    <!--  中間打入介紹   -->
-            
-            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1632886856/blog/e7poosbr2xpd2ajjz9uy.webp">   <!--  雙引號中間放入圖片網址   -->
-            <p><strong>伯朗大道</strong></p>  <!--  中間打入景點名稱   -->
-            <p>筆直的「伯朗大道」的正式名稱其實是「錦新三號道路」，全長約 2.2 公里。由於兩旁毫無電線桿，加上逢稻穗成熟時，道路兩旁無邊無際的金色稻穗隨風搖曳，寧靜的田園景緻，被伯朗咖啡選中拍攝廣告，之後金城武代言的長榮航空亦來此取景，自此聲名大噪，將這條道路暱稱為「伯朗大道」。</p>
-            
-            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1632887966/blog/hqy1ozgadbilbfg1bsmk.webp">   <!--  雙引號中間放入圖片網址   -->
-            <p><strong>太麻里櫻木平交道</strong></p>  <!--  中間打入景點名稱   -->
-            <p>灌籃高手粉絲快看，台灣也有櫻木花道平交道！是台東太麻里超熱門的打卡景點，台東的海及天空特別蔚藍，彷彿真的走進漫畫中，成為灌籃高手的角色之一，快到太麻里尋找台版櫻木平交道合照吧！</p>
-        </section>
-
-
-
-        <footer>
-            <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
-        </footer>
-</body>
-
-</html>
+.breadcrumb a:hover {
+    color: #ff7b00;   
+}
