@@ -10,7 +10,7 @@
         function saveScrollPosition() {
             localStorage.setItem('scrollPosition', window.scrollY); // 保存垂直滾動位置
         }
-    
+
         // 恢復滾動位置
         function restoreScrollPosition() {
             const scrollPosition = localStorage.getItem('scrollPosition');
@@ -19,13 +19,13 @@
                 localStorage.removeItem('scrollPosition'); // 清除保存的位置
             }
         }
-    
+
         // 恢復滾動位置時在頁面加載完成後執行
         window.onload = restoreScrollPosition;
         // 在頁面離開前保存滾動位置
         window.onbeforeunload = saveScrollPosition;
     </script>
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -176,27 +176,25 @@
         }
 
         #topButton {
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #ddd; 
-    border-radius: 50px; 
-    padding: 10px 15px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 1000; 
-}
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
 
-#topButton:hover {
-    background-color: #e2e6ea; 
-    transform: scale(1.1); 
-}
-
-
+        #topButton:hover {
+            background-color: #e2e6ea;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -299,7 +297,8 @@
         <div class="travel-card-container">
             <div class="travel-card">
                 <a href="Taichung.html">
-                    <img src="https://www.twarchitect.org.tw/web2015/wp-content/uploads/2017/02/201703a1-1.jpg" alt="台中">
+                    <img src="https://www.twarchitect.org.tw/web2015/wp-content/uploads/2017/02/201703a1-1.jpg"
+                        alt="台中">
                     <div class="travel-card-content">
                         <h3>台中</h3>
                         <p>亞洲，台灣</p>
@@ -320,8 +319,7 @@
 
             <div class="travel-card">
                 <a href="nantou.html">
-                    <img src="https://static.liontech.com.tw/cmspic/PIC2203-006299/M_PIC2203-006299.jpg"
-                        alt="南投">
+                    <img src="https://static.liontech.com.tw/cmspic/PIC2203-006299/M_PIC2203-006299.jpg" alt="南投">
                     <div class="travel-card-content">
                         <h3>南投</h3>
                         <p>亞洲，台灣</p>
@@ -381,8 +379,8 @@
             </div>
 
             <div class="travel-card">
-                <a href="Pingtung.html">
-                    <img src="https://www.hl.gov.tw/images/default.png" alt="屏東">
+                <a href="Hualien.html">
+                    <img src="https://www.hl.gov.tw/images/default.png" alt="花蓮">
                     <div class="travel-card-content">
                         <h3>花蓮</h3>
                         <p>亞洲，台灣</p>
@@ -390,27 +388,64 @@
                 </a>
             </div>
         </div>
-        <footer>
-            <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
-        </footer>
-        
+    </section>
 
-        <button id="topButton" onclick="scrollToTop()" style="display: none;">⬆ Top</button>
- 
-        <script>
-            window.onscroll = function () {
-                const topButton = document.getElementById("topButton");
-                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                    topButton.style.display = "block";
-                } else {
-                    topButton.style.display = "none";
-                }
-            };
-        
-            function scrollToTop() {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+    <section id="外島">
+        <h2>外島</h2>
+        <div class="travel-card-container">
+            <div class="travel-card">
+                <a href="Penghu.html">
+                    <img src="https://tour.taitung.gov.tw/content/images/static/1-3-HTV-1.jpg" alt="澎湖">
+                    <div class="travel-card-content">
+                        <h3>澎湖</h3>
+                        <p>亞洲，台灣</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="travel-card">
+                <a href="kinmen.html">
+                    <img src="https://www.hl.gov.tw/images/default.png" alt="金門">
+                    <div class="travel-card-content">
+                        <h3>金門</h3>
+                        <p>亞洲，台灣</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="travel-card">
+                <a href="Mazu.html">
+                    <img src="https://www.hl.gov.tw/images/default.png" alt="馬祖">
+                    <div class="travel-card-content">
+                        <h3>馬祖</h3>
+                        <p>亞洲，台灣</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 智慧商務旅行社 版權所有.</p>
+    </footer>
+
+
+    <button id="topButton" onclick="scrollToTop()" style="display: none;">⬆ Top</button>
+
+    <script>
+        window.onscroll = function () {
+            const topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
             }
-        </script>
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </body>
 
 </html>
