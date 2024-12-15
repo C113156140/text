@@ -5,26 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAIWAN</title>
-    <script>
-        // 保存滾動位置
-        function saveScrollPosition() {
-            localStorage.setItem('scrollPosition', window.scrollY); // 保存垂直滾動位置
-        }
-
-        // 恢復滾動位置
-        function restoreScrollPosition() {
-            const scrollPosition = localStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                window.scrollTo(0, parseInt(scrollPosition, 10)); // 恢復滾動到指定位置
-                localStorage.removeItem('scrollPosition'); // 清除保存的位置
-            }
-        }
-
-        // 恢復滾動位置時在頁面加載完成後執行
-        window.onload = restoreScrollPosition;
-        // 在頁面離開前保存滾動位置
-        window.onbeforeunload = saveScrollPosition;
-    </script>
+    
 
     <style>
         body {
@@ -436,20 +417,7 @@
 
     <button id="topButton" onclick="scrollToTop()" style="display: none;">⬆ Top</button>
 
-    <script>
-        window.onscroll = function () {
-            const topButton = document.getElementById("topButton");
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                topButton.style.display = "block";
-            } else {
-                topButton.style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    </script>
+    
 </body>
 
 </html>
